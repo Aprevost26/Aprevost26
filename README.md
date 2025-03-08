@@ -1,92 +1,81 @@
-# Task 1 - JavaScript Basics Task
  
- ![Alt text](https://github.com/user-attachments/assets/f3ec0beb-dd34-4d7c-a99a-92aab93bd3a9)
+ **Penyelesaian Tugas:**
  
- **Exercises Overview:**
+ 1. Menghitung luas persegi panjang 
+ 2. Menghitung diameter, keliling, dan luas lingkaran
+ 3. Menentukan sudut ketiga segitiga jika dua sudut diketahui
+ 4. Menghitung selisih antara dua tanggal dalam hari
+ 5. Menampilkan inisial nama dalam huruf besar
  
- 1. Calculate the area of a rectangle 
- 2. Calculate the diameter, circumference and area of a circle
- 3. Find the third angle of a triangle given two angles
- 4. Calculate the difference between two dates in days
- 5. Display name initials in uppercase
+ ## 1. Menghitung luas persegi panjang 
+ **kode**:
+  ```
+ const panjang = 5
+ const lebar = 3
+ const luasPersegiPanjang = panjang * lebar
+
+ alert(`panjang: ${panjang} Di X lebar: ${lebar} maka hasilnya = ${luasPersegiPanjang}`)
+  ```
+ **Hasil:** 
+ > 5 di X 3  maka hasilnya = 15
  
- ## 1. Calculate the area of a rectangle 
- **Code**:
+ ## 2. Menghitung diameter, keliling, dan luas lingkaran
+ **kode:**
  ```
- let length = 5;
- let width = 3;
- let areaReactangle = length * width;
+const r = 5
+const d = 2 * r
+const pi = 3.141592653589793
+const keliling = pi * d
+const luas_lingkaran = pi * r * r
+const luas_lingkaran_bulat = Math.floor(luas_lingkaran * 1000) / 1000
  
- console.log('Area of Reactangle: ');
- console.log(`Length: ${length}, Width: ${width} → Area = ${areaReactangle}`);
+alert (`Jari-jari: ${r}  Diameter: ${d}, Keliling: ${keliling}, Luas: ${luas_lingkaran_bulat}`)
  ```
+ **Hasil:** 
+ > Jari-jari: 5, Diameter: 10, Keliling: 31.4159 dan Luas: 78.539
  
- **Output:**
- > Area of Reactangle: ↴ 
- > Length: 5, Width: 3 → Area = 15
+
+ ## 3. Menentukan sudut ketiga segitiga jika dua sudut diketahui
+ **kode:**
+```
+ let a = 80
+ let b = 65
+ let c = 180 - (a + b) =?
  
- ## 2. Calculate diameter, Circumference and Area of a circle
- **Code:**
+ const a = 80;
+ const b = 65;
+ const c = 180 - (a + b);
+ 
+ alert (`Diketahui sudut: a = ${a}°, b = ${b}°  maka hasil Sudut ketiga adalah: ${c}°`)
+```
+ **Hasil:**
+ > Diketahui sudut: a = 80°, b = 65° maka hasil Sudut ketiga adalah: 35°
+ 
+
+ ## 4. Menghitung selisih antara dua tanggal dalam hari
+ **kode:**
  ```
- let r = 5;
- let d = 2 * r;
- let pi = 3.141592653589793
- let circumference = pi * d;
- let area_circle = pi * r * r;
- let area_circle_fixed = Math.floor(area_circle * 1000) / 1000;
- 
- console.log("Circle Properties: ↴");
- console.log(`Radius: ${r} → Diameter: ${d}, Circumference: ${circumference.toFixed(4)}, Area: ${area_circle_fixed}`);
+let tanggalPertama = first Date("2024-03-19");
+let tanggalKedua = second Date("2024-03-21");
+
+const selisih_waktu = tanggalKedua.getTime() - tanggalPertama.getTime();
+const selisih_hari = Math.round(selisih_waktu / (1000 * 3600 * 24));
+
+alert (`Selisih hari antara ${tanggalPertama.toDateString()} dan ${tanggalKedua.toDateString()} → ${selisih_hari} hari`);
  ```
+ **Hasil:**
  
- **Output:**
- > Circle Properties: ↴
- >
- > Radius: 5 → Diameter: 10, Circumference: 31.4159, Area: 78.539
+ > Selisih hari antara 19 Mar 2024 dan 21 Mar 2024 → adalah 2 hari
  
- ## 3. Find the third angle of a triangle given two angles
- **Code:**
+ ## 5. Menampilkan inisial nama dalam huruf besar
+ **kode:**
  ```
- let a, b, c;
+ let nama = 'Null or 1'
+if (nama ==Null) {nama = 'John Doe'} //"John Doe" adalah nama fiktif yang digunakan untuk merujuk pada seseorang yang identitasnya tidak diketahui atau dirahasiakan. Nama ini sering digunakan dalam kasus hukum, forensik, atau contoh umum dalam dokumen dan tutorial
+else { nama = 'Achmad Choiri' }
+(jika di atas diisi Null maka akan muncul nama John Doe tetapi jika diisi angka yang lain seperti angka 1 maka akan otomatis jadi Nama Achmad Choiri
+alert (`nama inisial adalah ${nama}) 
+```
+**Output:**
  
- a = 80;
- b = 65;
- c = 180 - (a + b);
- 
- console.log(`Given angles: a = ${a}°, b = ${b}° → The third angle is: ${c}°`);
- ```
- 
- **Output:**
- > Given angles: a = 80°, b = 65° → The third angle is: 35°
- 
- ## 4. Calculate the difference between two dates in days
- **Code:**
- ```
- let date1 = new Date("2024-03-19");
-    let date2 = new Date("2024-03-21");
- 
- let Difference_In_Time = date2.getTime() - date1.getTime();
- let Difference_In_Days = Math.round (Difference_In_Time / (1000 * 3600 * 24));
- 
- console.log(`Days difference between ${date1.toDateString()} and ${date2.toDateString()} → ${Difference_In_Days} days`);
- ```
- **Output:**
- 
- > Days difference between Mar 19 2024 and Mar 21 2024 → is 2 days
- 
- ## 5. Display name initials in uppercase
- **Code:**
- ```
- const s1 = "John Doe";
- const s2 = s1.charAt(0)+s1.charAt(5);
- const n1 = "Achmad Choiri";
- const n2 = n1.charAt(0).toUpperCase() + n1.charAt(6) + n1.charAt(12).toUpperCase();
- 
- console.log(`Initials of ${s1}: ${s2}`);
- console.log(`Initials of ${n1}: ${n2}`);
- ```
- **Output:**
- 
- > Initials of John Doe: JD
- >
- > Initials of Achmad Choiri: AC
+ > Nama inisial : John Doe / Achmad Choiri
